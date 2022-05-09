@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "React 多页应用模板",
   "scripts": {
-    "start": "parcel './src/pages/*/index.html' src/index.html",
-    "build": "parcel build './src/pages/*/index.html' src/index.html"
+    "start": "parcel './src/pages/*/index.html' -p 7777",
+    "build": "parcel build './src/pages/*/*.html' --public-url ../ './src/pages/*.html' --public-url ./"
   },
   "keywords": [],
   "author": "",

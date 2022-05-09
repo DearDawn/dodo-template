@@ -10,7 +10,7 @@ export const App = (props: IProps) => {
 
   return (
     <div className={styles.app}>
-      <a href='./pages/home'>Home</a>
+      <a href='./home'>Home 1234567</a>
     </div>
   )
 }
