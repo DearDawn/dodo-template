@@ -4,7 +4,8 @@
   "description": "React 多页应用模板",
   "scripts": {
     "start": "parcel './src/pages/*/index.html' -p 7777",
-    "build": "parcel build './src/pages/*/*.html' --public-url ../ './src/pages/*.html' --public-url ./"
+    "start:base": "parcel './src/pages/*.html' -p 7777",
+    "build": "parcel build './src/pages/*.html' --public-url ./;parcel build './src/pages/*/*.html' --public-url ../"
   },
   "keywords": [],
   "author": "",
