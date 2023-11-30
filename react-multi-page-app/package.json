@@ -11,15 +11,17 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@parcel/config-default": "^2.5.0",
-    "@parcel/core": "^2.5.0",
-    "@parcel/transformer-less": "^2.5.0",
-    "@types/react": "^18.0.9",
-    "@types/react-dom": "^18.0.3",
-    "parcel": "^2.5.0"
+    "@parcel/config-default": "^2.10.3",
+    "@parcel/core": "^2.10.3",
+    "@parcel/transformer-less": "^2.10.3",
+    "@types/react": "^18.2.39",
+    "@types/react-dom": "^18.2.17",
+    "parcel": "^2.10.3",
+    "process": "^0.11.10"
   },
   "dependencies": {
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "clsx": "^2.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
