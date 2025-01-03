@@ -2,6 +2,11 @@
   "compilerOptions": {
     "jsx": "react-jsx",
     "baseUrl": ".",
+    "lib": [
+      "ESNext",
+      "DOM"
+    ],
+    "module": "CommonJS",
     "esModuleInterop": true,
     "paths": {
       "@/*": [

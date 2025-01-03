@@ -1,0 +1,31 @@
+.posa() {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+.dfx(@jc: center, @ai: center) {
+  display: flex;
+  align-items: @ai;
+  justify-content: @jc;
+}
+
+.dfxc(@jc: center, @ai: center) {
+  display: flex;
+  align-items: @ai;
+  justify-content: @jc;
+  flex-direction: column;
+}
+
+@keyframes fade_in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
