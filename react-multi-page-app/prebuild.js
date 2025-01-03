@@ -1,11 +1,20 @@
 const fs = require('fs');
 const dayjs = require('dayjs');
+const path = require('path');
 
 // 获取当前日期和时间
 const buildTime = dayjs().format('YYYY-MM-DD HH:mm:ss');
 
 // 读取 .env 文件内容
-const envContent = fs.readFileSync('.env', 'utf8');
+const envFilePath = path.join(__dirname, '.env');
+
+// 读取 .env 文件内容，如果文件不存在则创建
+let envContent = '';
+if (fs.existsSync(envFilePath)) {
+  envContent = fs.readFileSync(envFilePath, 'utf8');
+} else {
+  fs.writeFileSync(envFilePath, '', 'utf8');
+}
 
 // 解析 .env 文件内容，获取上一次的版本号
 const previousVersion = envContent.match(/APP_VERSION=(\d*)/)?.[1] || 0;
