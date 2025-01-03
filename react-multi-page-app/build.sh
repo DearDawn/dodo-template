@@ -14,16 +14,16 @@ echo $PROJECT_NAME $PROJECT_PATH
 . /www/server/nvm/nvm.sh
 # . ~/.nvm/nvm.sh
 
-nvm use v16.10.0
+nvm use v18.17.0
 if [ $? != 0 ]; then
-  nvm install v16.10.0
+  nvm install v18.17.0
 fi
 
 node -v
 npm -v
 
 echo "start install"
-npm install --registry=https://registry.npmjs.org/
+npm install --registry=https://registry.npmmirror.com
 
 echo "start build"
 npm run build
@@ -34,10 +34,10 @@ if [[ $? != 0 || ! -d $DIST_PATH ]]; then
 fi
 
 PUBLIC_PATH=$PROJECT_PATH$PROJECT_NAME
-echo "start moving" $PUBLIC_PATH
+echo "start moving" $DIST_PATH $PUBLIC_PATH
 
 if [[ -d $PROJECT_PATH && $PROJECT_NAME ]]; then
   rm -rf $PUBLIC_PATH
 fi
 
-mv $DIST_PATH $PROJECT_PATH$PROJECT_NAME
+mv $DIST_PATH $PUBLIC_PATH
