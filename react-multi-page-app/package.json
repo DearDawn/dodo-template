@@ -5,8 +5,7 @@
   "scripts": {
     "prestart": "node prebuild.js",
     "start": "npm run clean && parcel src/pages/*/index.html src/pages/*.html -p 7777",
-    "start:server": "npm run clean && parcel src/pages/*/index.html -p 7798",
-    "start:api": "npm run clean && parcel src/pages/*/index.html -p 7777 --open",
+    "start:api": "npm run clean && parcel src/pages/*/index.html src/pages/*.html -p 7777 --open",
     "prebuild": "node prebuild.js",
     "build": "npm run clean && parcel build src/pages/*.html --public-url ./ --no-source-maps && parcel build src/pages/*/*.html --public-url ../ --no-source-maps",
     "build:analyze": "parcel build src/pages/*.html --public-url ./ --no-source-maps && parcel build src/pages/*/*.html --public-url ../ --no-source-maps --reporter @parcel/reporter-bundle-analyzer",
